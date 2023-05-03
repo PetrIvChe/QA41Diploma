@@ -9,3 +9,9 @@
 * ./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app"
 6. For PostgresSQL
 * ./gradlew clean test "-Ddb.url=jdbc:postgresql://localhost:5432/app"
+
+//Запуск в режиме дебага
+./gradlew clean test "-Ddb.url=jdbc:mysql://localhost:3306/app" --debug-jvm
+when see  in terminal << Listening for transport dt_socket at address: 5005 >>
+
+Run -> Attach to proces -> Java

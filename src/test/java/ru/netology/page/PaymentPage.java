@@ -12,13 +12,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class PaymentPage {
-    private SelenideElement headingPayment = $$("h3.heading").find(exactText("Оплата по карте"));
-    private SelenideElement cardNumberField = $("input[placeholder='0000 0000 0000 0000']");
-    private SelenideElement monthField = $("input[placeholder='08']");
-    private SelenideElement yearField = $("input[placeholder='22']");
-    private SelenideElement cvcField = $("input[placeholder='999']");
-    private SelenideElement ownerField = $$(".input__control").get(3);
-    private SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
+    private final SelenideElement headingPayment = $$("h3.heading").find(exactText("Оплата по карте"));
+    private final SelenideElement cardNumberField = $("input[placeholder='0000 0000 0000 0000']");
+    private final SelenideElement monthField = $("input[placeholder='08']");
+    private final SelenideElement yearField = $("input[placeholder='22']");
+    private final SelenideElement cvcField = $("input[placeholder='999']");
+    private final SelenideElement ownerField = $$(".input__control").get(3);
+    private final SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
     private final SelenideElement failureNote =  $(byText("Ошибка! Банк отказал в проведении операции."));
 
     public PaymentPage() {
@@ -35,7 +35,7 @@ public class PaymentPage {
     }
 
 
-    public void successfulPaymentDebitCard() {
+    public void successfulPaymentDebitCardNotification() {
         $(".notification_status_ok")
                 .shouldHave(text("Успешно Операция одобрена Банком."), Duration.ofSeconds(15)).shouldBe(visible);
     }

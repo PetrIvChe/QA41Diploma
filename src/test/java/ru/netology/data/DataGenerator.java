@@ -7,9 +7,11 @@ import java.time.format.DateTimeFormatter;
 import java.util.Locale;
 
 public class DataGenerator {
+
     private DataGenerator() {
     }
-    public static Faker faker = new Faker(new Locale("en"));
+
+    public static final Faker faker = new Faker(new Locale("en"));
 
     public static String getFirstCardNumber() {
         return ("4444 4444 4444 4441");
@@ -75,6 +77,7 @@ public class DataGenerator {
     public static String getInvalidOwnerCardWithNumbers() {
         return (faker.name().firstName() + faker.numerify("#######"));
     }
+
     public static String getInvalidOwnerCardOneLetterName() {
         return "G";
     }

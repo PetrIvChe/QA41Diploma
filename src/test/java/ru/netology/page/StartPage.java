@@ -8,9 +8,9 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class StartPage {
-    private SelenideElement headingStart = $("h2.heading");
-    private SelenideElement paymentButton = $$(".button").find(exactText("Купить"));
-    private SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
+    private final SelenideElement headingStart = $("h2.heading");
+    private final SelenideElement paymentButton = $$(".button").find(exactText("Купить"));
+    private final SelenideElement creditButton = $$(".button").find(exactText("Купить в кредит"));
 
     public StartPage() {
         headingStart.shouldBe(visible);

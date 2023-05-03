@@ -11,13 +11,13 @@ import static com.codeborne.selenide.Selenide.$;
 import static com.codeborne.selenide.Selenide.$$;
 
 public class CreditPage {
-    private SelenideElement headingCredit = $$("h3.heading").find(exactText("Кредит по данным карты"));
-    private SelenideElement cardNumberField = $("input[placeholder='0000 0000 0000 0000']");
-    private SelenideElement monthField = $("input[placeholder='08']");
-    private SelenideElement yearField = $("input[placeholder='22']");
-    private SelenideElement cvcField = $("input[placeholder='999']");
-    private SelenideElement ownerField = $$(".input__control").get(3);
-    private SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
+    private final SelenideElement headingCredit = $$("h3.heading").find(exactText("Кредит по данным карты"));
+    private final SelenideElement cardNumberField = $("input[placeholder='0000 0000 0000 0000']");
+    private final SelenideElement monthField = $("input[placeholder='08']");
+    private final SelenideElement yearField = $("input[placeholder='22']");
+    private final SelenideElement cvcField = $("input[placeholder='999']");
+    private final SelenideElement ownerField = $$(".input__control").get(3);
+    private final SelenideElement continueButton = $$(".button").find(exactText("Продолжить"));
 
     public CreditPage() {
         headingCredit.shouldBe(visible);
